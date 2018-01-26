@@ -89,12 +89,12 @@ Player.prototype.drawLife = function(ctx, canvas) {
         this.ctx.fillStyle = this.color;
         this.ctx.fill();
         this.ctx.beginPath();
-        this.ctx.arc(30, 20, 10, 0, Math.PI * 2, true);
+        this.ctx.arc(35, 20, 10, 0, Math.PI * 2, true);
         this.ctx.closePath();
         this.ctx.fillStyle = this.color;
         this.ctx.fill();
         this.ctx.beginPath();
-        this.ctx.arc(50, 20, 10, 0, Math.PI * 2, true);
+        this.ctx.arc(55, 20, 10, 0, Math.PI * 2, true);
         this.ctx.closePath();
         this.ctx.fillStyle = this.color;
         this.ctx.fill();
@@ -105,11 +105,11 @@ Player.prototype.drawLife = function(ctx, canvas) {
         this.ctx.fillStyle = this.color;
         this.ctx.fill();
         this.ctx.beginPath();
-        this.ctx.arc(30, 25, 10, 0, Math.PI * 2, true);
+        this.ctx.arc(33, 25, 10, 0, Math.PI * 2, true);
         this.ctx.closePath();
         this.ctx.fillStyle = this.color;
         this.ctx.fill();
-    }else if (this.life > 13) {
+    }else if (this.life > 0) {
         this.ctx.beginPath();
         this.ctx.arc(10, 20, 10, 0, Math.PI * 2, true);
         this.ctx.closePath();
