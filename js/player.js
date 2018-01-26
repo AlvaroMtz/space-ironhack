@@ -23,11 +23,11 @@ function Player(ctx, canvas, image) {
 Player.prototype.render = function () {
     this.image.src = "images/nave.png";
     ctx.drawImage(this.image, this.x-30, this.y-10, this.width, this.height);
-    // this.ctx.beginPath();
-    // this.ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-    // this.ctx.closePath();
-    // this.ctx.fillStyle = this.color;
-    // this.ctx.fill();
+    this.ctx.beginPath();
+    this.ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
+    this.ctx.closePath();
+    this.ctx.fillStyle = this.color;
+    this.ctx.fill();
 }
 
 Player.prototype.update = function () {
@@ -68,8 +68,6 @@ Player.prototype.hitObstacle = function(obs) {
     if (Math.abs(obs.x - this.x) < this.radius + obs.radius - 5) {
       if (Math.abs(obs.y - this.y) < this.radius + obs.radius - 5) {
         this.life = this.life - 1;
-        console.log('choque');
-        console.log(this.life)
         return true;
       }
     }
@@ -125,23 +123,5 @@ Player.prototype.drawLife = function(ctx, canvas) {
         
     }
   };
-
-
-//   Player.prototype.drawLife = function(ctx, canvas) {
-//     this.ctx.textAlign = "center";
-//     if (this.life > 21) {
-//         this.image.src = "images/Life.png";
-//         ctx.drawImage(this.image, 10, 10, 20, 20);
-//         ctx.drawImage(this.image, 10, 25, 20, 20);
-//         ctx.drawImage(this.image, 10, 35, 20, 20);
-//     } else if (this.life > 11) {
-//         this.image.src = "images/Life.png";
-//         ctx.drawImage(this.image, 10, 10, 20, 20);
-//         ctx.drawImage(this.image, 10, 25, 20, 20);
-//     }else {
-//         this.image.src = "images/Life.png";
-//         ctx.drawImage(this.image, 10, 10, 20, 20);
-//     }
-//   };
 
 

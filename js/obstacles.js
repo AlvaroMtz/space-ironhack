@@ -18,7 +18,7 @@ Obstacle.prototype.draw = function (){
     this.ctx.fillStyle = this.color;
     this.ctx.fill();
     this.image.src = "images/asteroid-icon.png";
-    this.ctx.drawImage(this.image, (this.x-20), (this.y-20), this.width, this.height);
+    this.ctx.drawImage(this.image, (this.x-10), (this.y-20), this.width, this.height);
 }
 
 Obstacle.prototype.randomPositionX = function (){
