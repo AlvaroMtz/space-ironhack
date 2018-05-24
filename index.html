@@ -4,20 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
     <title>Document</title>
 </head>
 
 <body>
-    <dic class="container_one">
-        <canvas id="canvas" width="350" height="600"></canvas>
+    <dic class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <canvas id="canvas" width="350" height="600"></canvas>
+            </div>
+            <div class="col-md-4">
+                <button class="">¿Quieres jugar otra vez?</button>
+            </div>
+        </div>
     </dic>
-    <div class="instrucciones">
-    </div>
+
+
 
 </body>
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('button').click(function () {
+            location.reload();
+        });
+    });
+</script>
 <script src="./js/obstacles.js"></script>
 <script src="./js/player.js"></script>
 <script src="./js/main.js"></script>
+
 </html>

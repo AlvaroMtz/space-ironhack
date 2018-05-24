@@ -10,6 +10,7 @@ function Player(ctx, canvas, image) {
     this.radius = 15,
     this.life = 30,
     this.color = 'red',
+    this.colordead = 'black'
     this.orders = {
         left: false,
         right: false
@@ -72,10 +73,7 @@ Player.prototype.hitObstacle = function(obs) {
       }
     }
     };
-Player.prototype.theEnd = function (ctx, canvas){
-    if (this.life = 0){
-    }
-  }
+
 
 Player.prototype.drawLife = function(ctx, canvas) {
     this.ctx.font = "16px Comic Sans MS";
@@ -117,11 +115,13 @@ Player.prototype.drawLife = function(ctx, canvas) {
         this.ctx.beginPath();
         this.ctx.arc(0, 0, 1000, 1000, Math.PI * 2, true);
         this.ctx.closePath();
-        this.ctx.fillStyle = this.color;
+        this.ctx.fillStyle = this.colordead;
         this.ctx.fillStyle = "GAME OVER";
         this.ctx.fill();
+        $('button').addClass('Aparecer');  
         
     }
   };
+
 
 

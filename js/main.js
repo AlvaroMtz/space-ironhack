@@ -36,7 +36,7 @@ function start () {
 
 function stopGame(s, e) {
   var cancelSetInterval=
-    setInterval(update,0)
+    setInterval(update,0) 
 
   if (s.life <= -1) {
     if (s.hitObstacle(e) == true) {
